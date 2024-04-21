@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello drawing!</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <div class="wrapper" id="app-wrapper-vertical">
+    <div id="app-wrapper-horizontal">
+
+      <!-- UI section -->
+      <fieldset id="sidebar-fieldset">
+        <legend>Controls</legend>
+
+        <div class="control-stack">
+          <div class="control-container border-bottom">
+            <p class="text-small">Action</p>
+            <select name="shape" class="dropdown" id="shape-selector">
+              <option value="rectangle">Rectangle</option>
+              <option value="ellipse">Ellipse</option>
+              <option value="line">Line</option>
+              <option value="eraser-rectangle">Eraser: Rectangle</option>
+              <option value="eraser-ellipse">Eraser: Ellipse</option>
+            </select>
+
+          </div>
+          <div class="control-container border-bottom">
+            <p class="text-small">Swatch</p>
+            <div class="color-swatch" id="color-swatch-stroke"></div>
+          </div>
+          <div class="control-container border-bottom">
+            <p class="text-small">Stroke</p>
+            <div class="slider-container">
+              R <input type="range" min="0" max="255" value="0" class="slider" id="stroke-slider-red">
+              <span id="stroke-value-red">0</span>
+            </div>
+            <div class="slider-container">
+              G <input type="range" min="0" max="255" value="0" class="slider" id="stroke-slider-green">
+              <span id="stroke-value-green">0</span>
+            </div>
+            <div class="slider-container">
+              B <input type="range" min="0" max="255" value="0" class="slider" id="stroke-slider-blue">
+              <span id="stroke-value-blue">0</span>
+            </div>
+            <div class="slider-container">
+              A <input type="range" min="0" max="255" value="255" class="slider" id="stroke-slider-alpha">
+              <span id="stroke-value-alpha">0</span>
+            </div>
+            <div class="slider-container">
+              W <input type="range" min="0" max="25" value="1" class="slider" id="stroke-slider-width">
+              <span id="stroke-value-width">0</span>
+            </div>
+          </div>
+          <div class="control-container border-bottom">
+            <p class="text-small">Fill</p>
+            <div class="slider-container">
+              R <input type="range" min="0" max="255" value="127" class="slider" id="fill-slider-red">
+              <span id="fill-value-red">0</span>
+            </div>
+            <div class="slider-container">
+              G <input type="range" min="0" max="255" value="127" class="slider" id="fill-slider-green">
+              <span id="fill-value-green">0</span>
+            </div>
+            <div class="slider-container">
+              B <input type="range" min="0" max="255" value="127" class="slider" id="fill-slider-blue">
+              <span id="fill-value-blue">0</span>
+            </div>
+            <div class="slider-container">
+              A <input type="range" min="0" max="255" value="127" class="slider" id="fill-slider-alpha">
+              <span id="fill-value-alpha">0</span>
+            </div>
+          </div>
+          <div class="control-container">
+            <p class="text-small">Actions</p>
+            <button id="save-canvas-button">Save</button>
+            <button id="clear-canvas-button">Clear</button>
+
+          </div>
+        </div>
+
+
+      </fieldset>
+      <fieldset id="canvas-fieldset">
+        <legend>Canvas</legend>
+
+        <div id="canvas-container"></div>
+
+      </fieldset>
+    </div>
+  </div>
+
+
+  <!-- Use full p5.js library when developing locally -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+
+  <!-- Switch to minified version when deploying for production/use -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script> -->
+
+  <!-- Optional addons -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script> -->
+
+  <!-- Load the main script at the end of the page, when all the DOM elements are already present -->
+  <script type="text/javascript" src="js/webcam-color-3.js"></script>
+  <script type="text/javascript" src="js/dom-setup.js"></script>
+
+</body>
+
+</html>
